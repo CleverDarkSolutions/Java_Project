@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="760.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+            <SplitPane dividerPositions="0.22043010752688172" layoutY="-3.0" prefHeight="372.0" prefWidth="932.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="b1" layoutY="2.0" mnemonicParsing="false" onAction="#showNote1" prefHeight="46.0" prefWidth="200.0" text="Notatka 1" />
+                        <Button fx:id="b2" layoutY="48.0" mnemonicParsing="false" onAction="#showNote2" prefHeight="46.0" prefWidth="200.0" text="Notatka 2" />
+                        <Button fx:id="b3" layoutY="94.0" mnemonicParsing="false" onAction="#showNote3" prefHeight="46.0" prefWidth="200.0" text="Notatka 3" />
+                        <Button fx:id="b4" layoutY="140.0" mnemonicParsing="false" onAction="#showNote4" prefHeight="46.0" prefWidth="200.0" text="Notatka 4" />
+                        <Button fx:id="b5" layoutY="185.0" mnemonicParsing="false" onAction="#showNote5" prefHeight="46.0" prefWidth="200.0" text="Notatka 5" />
+                        <Button fx:id="b6" layoutY="231.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="200.0" text="Notatka 6" />
+                        <Button fx:id="b7" layoutY="277.0" mnemonicParsing="false" onAction="#showNote3" prefHeight="46.0" prefWidth="200.0" text="Notatka 7" />
+                        <Button layoutX="-2.0" layoutY="323.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="202.0" text="Notatka 8" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="370.0" prefWidth="621.0">
+                     <children>
+                        <Label fx:id="currentNoteContent" alignment="TOP_LEFT" layoutX="43.0" layoutY="29.0" prefHeight="328.0" prefWidth="518.0" text="Notatka">
+                           <font>
+                              <Font name="Book Antiqua" size="26.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="decrypt" layoutX="595.0" layoutY="14.0" prefHeight="25.0" prefWidth="85.0" promptText="Przesunięcie" />
+                        <Button layoutX="604.0" layoutY="48.0" mnemonicParsing="false" onAction="#decryptFinal" text="Odszyfruj" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            <Button fx:id="submitNewNote" layoutX="348.0" layoutY="620.0" mnemonicParsing="false" onAction="#addNote" prefHeight="57.0" prefWidth="173.0" text="Dodaj">
+               <font>
+                  <Font name="Book Antiqua" size="17.0" />
+               </font>
+            </Button>
+            <CheckBox fx:id="hashing" layoutX="372.0" layoutY="430.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="143.0" text="Szyfrowanie">
+               <font>
+                  <Font name="Book Antiqua" size="17.0" />
+               </font>
+            </CheckBox>
+            <TextField fx:id="newNoteTitle" layoutX="5.0" layoutY="420.0" prefHeight="46.0" prefWidth="320.0" promptText="Tytuł">
+               <font>
+                  <Font name="Book Antiqua" size="23.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="cesarArg" layoutX="372.0" layoutY="475.0" prefHeight="34.0" prefWidth="125.0" promptText="Przesunięcie ">
+               <font>
+                  <Font name="Book Antiqua" size="17.0" />
+               </font>
+            </TextField>
+            <Label layoutX="14.0" layoutY="380.0" prefHeight="32.0" prefWidth="266.0" text="Dodaj nową notatkę">
+               <font>
+                  <Font name="Book Antiqua" size="25.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="newNoteContent" layoutX="5.0" layoutY="475.0" prefHeight="202.0" prefWidth="320.0" promptText="Zawartosc">
+               <font>
+                  <Font name="Book Antiqua" size="17.0" />
+               </font>
+            </TextArea>
+            <ColorPicker fx:id="colour" layoutX="372.0" layoutY="564.0" />
+            <Label layoutX="372.0" layoutY="523.0" prefHeight="17.0" prefWidth="115.0" text="Wybierz kolor">
+               <font>
+                  <Font name="Book Antiqua" size="17.0" />
+               </font>
+            </Label>
+            <SplitPane dividerPositions="0.015151515151515152" layoutX="560.0" layoutY="367.0" prefHeight="357.0" prefWidth="370.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="355.0" prefWidth="0.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="413.0" prefWidth="359.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" prefWidth="166.0" text="Wyszukaj">
+                           <font>
+                              <Font name="Book Antiqua" size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="searchText" layoutX="7.0" layoutY="76.0" promptText="Szukana fraza">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <Button layoutX="7.0" layoutY="131.0" mnemonicParsing="false" onAction="#useSearch" text="Szukaj">
+                           <font>
+                              <Font name="Book Antiqua" size="17.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="searchResults" layoutX="14.0" layoutY="200.0" prefHeight="136.0" prefWidth="320.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+      </children>
+    </AnchorPane>
+      <TextField alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="932.0" text="https://github.com/CleverDarkSolutions" />
+  </children>
+</VBox>
