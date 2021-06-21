@@ -231,7 +231,7 @@ public class Controller implements Initializable{
             System.out.println(colourToString);
             buttons.get(size).setStyle("-fx-background-color:"+ colourToString + ";");
             */
-            
+
             System.out.println(newNoteContent.getText());
             System.out.println(newNoteTitle.getText());
             buttons.get(size).setText(newNoteTitle.getText());
