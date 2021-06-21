@@ -223,13 +223,15 @@ public class Controller implements Initializable{
 
             notes.add(n);
             int size = notes.size() - 1;
+            /*
             Color c = Color.web(colour.getValue().toString(), 1.0);
             System.out.println(c);
             String colourToString = c.toString();
             colourToString = colourToString.replace("0x", "#");
             System.out.println(colourToString);
             buttons.get(size).setStyle("-fx-background-color:"+ colourToString + ";");
-
+            */
+            
             System.out.println(newNoteContent.getText());
             System.out.println(newNoteTitle.getText());
             buttons.get(size).setText(newNoteTitle.getText());
